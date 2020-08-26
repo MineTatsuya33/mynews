@@ -13,11 +13,10 @@ class CreateProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile', function (Blueprint $table) {
+        Schema::create('profilehistories', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('profile_id');
             $table->string('edited_at');
-            
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateProfileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile');
+        Schema::dropIfExists('profilehistories');
     }
 }
